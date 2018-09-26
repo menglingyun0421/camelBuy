@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <RelativeLayout
+        android:id="@+id/order_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/colorRed">
+
+        <ImageView
+            android:id="@+id/order_title_back"
+            android:src="@mipmap/back"
+            android:layout_width="50dp"
+            android:layout_height="44dp" />
+        <TextView
+            android:id="@+id/order_title_midTv"
+            android:layout_centerInParent="true"
+            android:text="新客户"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:layout_width="100dp"
+            android:layout_height="44dp" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/newclient_et"
+        android:layout_marginTop="20dp"
+        android:hint="请输入客户昵称"
+        android:paddingLeft="10dp"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="44dp" />
+
+    <Button
+        android:id="@+id/newclient_btn"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="保存并使用"
+        android:textColor="@color/colorBlack"
+        android:background="@drawable/button_shape"
+        android:layout_width="match_parent"
+        android:layout_height="44dp" />
+
+
+
+
+
+</LinearLayout>

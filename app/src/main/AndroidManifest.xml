@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.lingyun.camelprocurementservice">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <application
+        android:name="MyApp"
+        tools:replace="android:name"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".basepage.BaseActivity" />
+        <activity
+            android:name=".homepage.HomeActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".orderfragment.neworder.NewOrderActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".orderfragment.aboutclient.CheckClient"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".orderfragment.aboutclient.NewClient"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".orderfragment.aboutproduct.CheckProduct"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".orderfragment.aboutproduct.NewProduct"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".orderfragment.aboutAddress.CheckAddress"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".orderfragment.aboutAddress.NewAddress"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".orderfragment.aboutRemark.EditRemark"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".orderfragment.OrderDetail"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".clientfragment.fragmentNewClient"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".setfragment.SetActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".clientfragment.ClientDetail" />
+        <activity android:name=".orderfragment.aboutproduct.NewPoint" />
+        <activity android:name=".orderfragment.aboutproduct.CheckPoint" />
+        <activity android:name=".orderfragment.aboutproduct.ProductDetail" />
+        <activity android:name=".setfragment.SetAddPoint"></activity>
+    </application>
+
+</manifest>

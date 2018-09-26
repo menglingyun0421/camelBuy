@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#333333</color>
+    <color name="colorYello">#ffff00</color>
+    <color name="colorGray">#C0C0C0</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="colorGreen">#00FF00</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="translucent">#00000000</color>
+
+    <!-- 底部导航栏radioButton颜色 -->
+    <color name="radioButton_checked">#238EFE</color>
+    <color name="radioButton_no_checked">#BFB9B9</color>
+</resources>

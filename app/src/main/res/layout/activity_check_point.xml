@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <RelativeLayout
+        android:id="@+id/order_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/colorRed">
+
+        <ImageView
+            android:id="@+id/order_title_back"
+            android:src="@mipmap/back"
+            android:layout_width="50dp"
+            android:layout_height="44dp" />
+        <TextView
+            android:id="@+id/order_title_midTv"
+            android:layout_centerInParent="true"
+            android:text="选择采购点"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:layout_width="100dp"
+            android:layout_height="44dp" />
+
+        <ImageView
+            android:id="@+id/order_title_rightIv"
+            android:layout_width="30dp"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20px"
+            android:src="@mipmap/plus" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/checkclient_lv"
+        android:layout_below="@+id/order_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+
+
+</RelativeLayout>
+

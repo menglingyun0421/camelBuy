@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lingyun.camelprocurementservice.orderfragment.aboutproduct.NewProduct">
+    <RelativeLayout
+        android:id="@+id/order_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/colorRed">
+
+        <ImageView
+            android:id="@+id/order_title_back"
+            android:src="@mipmap/back"
+            android:layout_width="50dp"
+            android:layout_height="44dp" />
+        <TextView
+            android:id="@+id/order_title_midTv"
+            android:layout_centerInParent="true"
+            android:text="商品详情"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:layout_width="100dp"
+            android:layout_height="44dp" />
+
+        <ImageView
+            android:id="@+id/order_title_rightIv"
+            android:layout_width="30dp"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20px"
+            android:src="@mipmap/icon_share" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/new_product_ll_one"
+        android:layout_below="@+id/order_title"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_height="40dp">
+            <TextView
+                android:id="@+id/newproduct_name_tv"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:text="名称"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:id="@+id/newproduct_name_et"
+                android:layout_marginLeft="50dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="30dp"
+                android:textSize="16dp"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:background="@color/colorWhite"/>
+
+            <ImageView
+                android:id="@+id/newproduct_name_iv"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="9dp"
+                android:src="@mipmap/clearbutton"
+                android:layout_width="30dp"
+                android:layout_height="40dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/newproduct_classify_rl"
+            android:layout_width="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_height="40dp">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:text="分类"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+
+            <ImageView
+                android:src="@mipmap/into_icon"
+                android:layout_alignParentRight="true"
+                android:layout_width="20dp"
+                android:layout_height="70dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:id="@+id/newproduct_classify_tv"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="35dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:text="其它"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/newproduct_cost_rl"
+            android:layout_width="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_height="40dp">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:text="成本计价使用的货币种类"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+
+            <ImageView
+                android:src="@mipmap/into_icon"
+                android:layout_alignParentRight="true"
+                android:layout_width="20dp"
+                android:layout_height="70dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:id="@+id/newproduct_cost_tv"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="35dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:text="人民币"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/newproduct_point_rl"
+            android:layout_width="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_height="40dp">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:text="采购点"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+
+            <ImageView
+                android:src="@mipmap/into_icon"
+                android:layout_alignParentRight="true"
+                android:layout_width="20dp"
+                android:layout_height="70dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:id="@+id/newproduct_point_tv"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="35dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:text="沃尔玛"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/newproduct_inPrice_rl"
+            android:layout_width="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_height="40dp">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:text="[参考]进价(人民币)"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+            <EditText
+                android:id="@+id/newproduct_inPrice_et"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:gravity="right|center_vertical"
+                android:hint="0.00"
+                android:inputType="numberDecimal"
+                android:paddingLeft="30dp"
+                android:textSize="16dp"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:background="@color/colorWhite"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/newproduct_costPrice_rl"
+            android:layout_width="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_height="40dp">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:text="[参考]其它成本(人民币)"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+            <EditText
+                android:id="@+id/newproduct_costPrice_et"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:gravity="right|center_vertical"
+                android:hint="0.00"
+                android:inputType="numberDecimal"
+                android:paddingLeft="30dp"
+                android:textSize="16dp"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:background="@color/colorWhite"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/newproduct_outPrice_rl"
+            android:layout_width="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_height="40dp">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:text="[参考]售价(人民币)"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+            <EditText
+                android:id="@+id/newproduct_outPrice_et"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:gravity="right|center_vertical"
+                android:hint="0.00"
+                android:inputType="numberDecimal"
+                android:paddingLeft="30dp"
+                android:textSize="16dp"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:background="@color/colorWhite"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/newproduct_profitPrice_rl"
+            android:layout_width="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_height="40dp">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorRed"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:text="单品毛利：￥"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+            <TextView
+                android:id="@+id/newproduct_profitPrice_tv"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorRed"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:text="0.00"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/newproduct_image_rl"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:text="商品"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:textColor="@color/colorBlack"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_height="70dp" />
+            <ImageView
+                android:id="@+id/newproduct_image_iv"
+                android:src="@mipmap/blankproduct"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="5dp"
+                />
+            <ImageView
+                android:src="@mipmap/into_icon"
+                android:layout_alignParentRight="true"
+                android:layout_width="20dp"
+                android:layout_height="70dp"
+                android:layout_marginRight="10dp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:background="@color/colorWhite"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+            <TextView
+                android:id="@+id/newproduct_share_tv"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:text="分享广告词："
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <EditText
+                android:id="@+id/newproduct_share_et"
+                android:hint="请填写要分享内容"
+                android:background="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:paddingLeft="10dp"
+                android:textSize="14dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="70dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/newproduct_btn"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="保存修改"
+            android:textColor="@color/colorBlack"
+            android:background="@drawable/button_shape"
+            android:layout_width="match_parent"
+            android:layout_height="44dp" />
+
+    </LinearLayout>
+
+
+    <include layout="@layout/picker_layout" />
+</RelativeLayout>

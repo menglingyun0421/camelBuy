@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lingyun.camelprocurementservice.clientfragment.ClientDetail">
+
+    <RelativeLayout
+        android:id="@+id/order_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/colorRed">
+        <ImageView
+            android:id="@+id/order_title_back"
+            android:src="@mipmap/back"
+            android:layout_width="50dp"
+            android:layout_height="44dp" />
+        <TextView
+            android:id="@+id/order_title_midTv"
+            android:layout_centerInParent="true"
+            android:text="客户"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:layout_width="100dp"
+            android:layout_height="44dp" />
+        <ImageView
+            android:id="@+id/order_title_rightIv"
+            android:layout_width="30dp"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20px"
+            android:src="@mipmap/plus" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/ClientDetail_lv"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+    <Button
+        android:id="@+id/ClientDetail_btn_save"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="保存"
+        android:textColor="@color/colorBlack"
+        android:background="@drawable/button_shape"
+        android:layout_width="match_parent"
+        android:layout_height="44dp" />
+    <Button
+        android:visibility="gone"
+        android:id="@+id/ClientDetail_btn_delete"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="删除"
+        android:textColor="@color/colorBlack"
+        android:background="@drawable/button_shape"
+        android:layout_width="match_parent"
+        android:layout_height="44dp" />
+
+</RelativeLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <ImageView
+        android:id="@+id/order_item_iv"
+        android:src="@mipmap/clearbutton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/newproduct_item_name_tv"
+        android:layout_toRightOf="@+id/order_item_iv"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="测试"
+        android:textSize="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/newproduct_item_productName_tv"
+        android:layout_toRightOf="@+id/order_item_iv"
+        android:layout_below="@+id/newproduct_item_name_tv"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="10dp"
+        android:text="水杯"
+        android:textSize="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/order_item_nonono"
+        android:layout_toRightOf="@+id/newproduct_item_productName_tv"
+        android:layout_alignBaseline="@+id/newproduct_item_productName_tv"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="10dp"
+        android:text="*"
+        android:textSize="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/order_item_productCount"
+        android:layout_toRightOf="@+id/newproduct_item_productName_tv"
+        android:layout_alignBaseline="@+id/newproduct_item_productName_tv"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="20dp"
+        android:text="10"
+        android:textSize="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/order_item_time"
+        android:layout_toRightOf="@+id/order_item_productCount"
+        android:layout_alignBaseline="@+id/newproduct_item_productName_tv"
+        android:layout_marginLeft="10dp"
+        android:text="0.00+0.00"
+        android:textSize="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="100"
+        android:id="@+id/newproduct_item_totalProfitVal"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"/>
+    <TextView
+        android:text="利润:"
+        android:id="@+id/newproduct_item_totalProfit_tv"
+        android:layout_toLeftOf="@+id/newproduct_item_totalProfitVal"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"/>
+    <TextView
+        android:text="100"
+        android:id="@+id/newproduct_item_totalpriceVal"
+        android:layout_width="wrap_content"
+        android:layout_toLeftOf="@+id/newproduct_item_totalProfit_tv"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:text="总额:"
+        android:id="@+id/newproduct_item_totalprice_tv"
+        android:layout_width="wrap_content"
+        android:layout_toLeftOf="@+id/newproduct_item_totalpriceVal"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:id="@+id/newproduct_item_isReceived"
+        android:layout_toRightOf="@+id/order_item_iv"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorGreen"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:text="已收款"
+        android:textSize="12dp"
+        android:padding="2px"
+        android:gravity="center"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/newproduct_item_isStock"
+        android:layout_toRightOf="@+id/newproduct_item_isReceived"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorGreen"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:text="已备货"
+        android:textSize="12dp"
+        android:padding="2px"
+        android:gravity="center"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/newproduct_item_isPayment"
+        android:layout_toRightOf="@+id/newproduct_item_isStock"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorGreen"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:text="已付款"
+        android:textSize="12dp"
+        android:padding="2px"
+        android:gravity="center"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/newproduct_item_isDeliver"
+        android:layout_toRightOf="@+id/newproduct_item_isPayment"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorGreen"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:text="已发货"
+        android:textSize="12dp"
+        android:padding="2px"
+        android:gravity="center"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/newproduct_item_isHarvest"
+        android:layout_toRightOf="@+id/newproduct_item_isDeliver"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorGreen"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:text="已收货"
+        android:textSize="12dp"
+        android:padding="2px"
+        android:gravity="center"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
