@@ -40,6 +40,7 @@ public class OrderUnfinish extends BaseFragment{
     private List<Map> searList=new ArrayList<>();
     private OrderAllAdapter adapter;
     private List<Map> searchMidList=new ArrayList<>();
+    private List<Map> timeList;
 
     @Nullable
     @Override
@@ -60,23 +61,23 @@ public class OrderUnfinish extends BaseFragment{
             @Override
             public void afterTextChanged(Editable s) {
                 searList.clear();
-                orderUnfinshList.clear();
-                orderUnfinshList.addAll(searchMidList);
+                timeList.clear();
+                timeList.addAll(searchMidList);
                 String serachNnam=order_unfinish_et.getText().toString();
                 if (!serachNnam.equals("")){
-                    for (int i=0;i<orderUnfinshList.size();i++){
-                        if (orderUnfinshList.get(i).get("clientName").equals(serachNnam)){
-                            searList.add(orderUnfinshList.get(i));
+                    for (int i=0;i<timeList.size();i++){
+                        if (timeList.get(i).get("clientName").equals(serachNnam)){
+                            searList.add(timeList.get(i));
                         }
                     }
-                    orderUnfinshList.clear();
-                    orderUnfinshList.addAll(searList);
+                    timeList.clear();
+                    timeList.addAll(searList);
                     adapter.notifyDataSetChanged();
-                    order_unfinish_tv.setText(orderUnfinshList.size()+"");
+                    order_unfinish_tv.setText(timeList.size()+"");
                 }else {
                     if (adapter!=null){
                         adapter.notifyDataSetChanged();
-                        order_unfinish_tv.setText(orderUnfinshList.size()+"");
+                        order_unfinish_tv.setText(timeList.size()+"");
                     }
                 }
             }
@@ -95,7 +96,7 @@ public class OrderUnfinish extends BaseFragment{
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Gson gson=new Gson();
-                String order=gson.toJson(orderUnfinshList.get(position));
+                String order=gson.toJson(timeList.get(position));
                 Intent intent=new Intent();
                 intent.setClass(getActivity(),OrderDetail.class);
                 intent.putExtra("order", order );
@@ -134,7 +135,7 @@ public class OrderUnfinish extends BaseFragment{
 
             order_unfinish_tv.setText(orderUnfinshList.size()+"");
             Log.e("mly_orderStr", "------------" + orderUnfinshList);
-            List<Map> timeList=new ArrayList<>();
+            timeList=new ArrayList<>();
             for (int i=orderUnfinshList.size();i>0;i--){
                 timeList.add(orderUnfinshList.get(i-1));
             }

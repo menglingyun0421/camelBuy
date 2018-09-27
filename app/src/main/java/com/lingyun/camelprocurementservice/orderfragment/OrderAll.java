@@ -44,6 +44,7 @@ public class OrderAll extends BaseFragment{
     private EditText order_unfinish_et;
     private List<Map> searList=new ArrayList<>();
     private List<Map> searchMidList=new ArrayList<>();
+    private List<Map> timeList;
 
     @Nullable
     @Override
@@ -65,7 +66,7 @@ public class OrderAll extends BaseFragment{
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Gson gson=new Gson();
-                String order=gson.toJson(orderList.get(position));
+                String order=gson.toJson(timeList.get(position));
                 Intent intent=new Intent();
                 intent.setClass(getActivity(),OrderDetail.class);
                 intent.putExtra("order", order );
@@ -90,23 +91,23 @@ public class OrderAll extends BaseFragment{
             @Override
             public void afterTextChanged(Editable s) {
                 searList.clear();
-                orderList.clear();
-                orderList.addAll(searchMidList);
+                timeList.clear();
+                timeList.addAll(searchMidList);
                 String serachNnam=order_unfinish_et.getText().toString();
                 if (!serachNnam.equals("")){
-                    for (int i=0;i<orderList.size();i++){
-                        if (orderList.get(i).get("clientName").equals(serachNnam)){
-                            searList.add(orderList.get(i));
+                    for (int i=0;i<timeList.size();i++){
+                        if (timeList.get(i).get("clientName").equals(serachNnam)){
+                            searList.add(timeList.get(i));
                         }
                     }
-                    orderList.clear();
-                    orderList.addAll(searList);
+                    timeList.clear();
+                    timeList.addAll(searList);
                     adapter.notifyDataSetChanged();
-                    order_unfinish_tv.setText(orderList.size()+"");
+                    order_unfinish_tv.setText(timeList.size()+"");
                 }else {
                     if (adapter!=null){
                         adapter.notifyDataSetChanged();
-                        order_unfinish_tv.setText(orderList.size()+"");
+                        order_unfinish_tv.setText(timeList.size()+"");
                     }
                 }
             }
@@ -125,7 +126,7 @@ public class OrderAll extends BaseFragment{
             }.getType());
             order_unfinish_tv.setText(orderList.size()+"");
             Log.e("mly_orderStr", "------------" + orderList);
-            List<Map> timeList=new ArrayList<>();
+            timeList=new ArrayList<>();
             for (int i=orderList.size();i>0;i--){
                 timeList.add(orderList.get(i-1));
             }
