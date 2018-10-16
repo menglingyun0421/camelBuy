@@ -81,6 +81,8 @@ public class OrderDetail extends BaseActivity {
     private Button bt_yes, bt_no; // 确定,取消按钮
     private RelativeLayout picker_rel; // 选择器布局
 
+    private int locationTag;
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -578,7 +580,7 @@ public class OrderDetail extends BaseActivity {
         }.getType());
         productList.clear();
         productList.addAll(midList);
-        productList.add(map);
+        productList.add(locationTag,map);
         String productStr = gson.toJson(productList);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("orderList", productStr);
@@ -599,10 +601,12 @@ public class OrderDetail extends BaseActivity {
             if (map.get("productId") != null && map.get("productId") != "") {
                 if (map.get("productId").equals(allmap.get("productId"))) {
                     midList.remove(i);
+                    locationTag=i;
                 }
             } else if (map.get("clientName").equals(neworder_clientName.getText().toString()) &&
                     map.get("proudctName").equals(neworder_productName.getText().toString())) {
                 midList.remove(i);
+                locationTag=i;
 //                Toast.makeText(OrderDetail.this, "删除成功", Toast.LENGTH_LONG).show();
             }
         }

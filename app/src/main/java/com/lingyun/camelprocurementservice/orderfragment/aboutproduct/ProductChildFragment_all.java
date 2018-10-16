@@ -6,11 +6,14 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Message;
 import android.support.annotation.Nullable;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import com.google.gson.Gson;
@@ -34,10 +37,13 @@ public class ProductChildFragment_all extends LazyLoadFragment {
     private List<Map> productList=new ArrayList<>();
     private String midList;
     private NewProductAdapter adapter;
+    private EditText order_product_et;
+    private List<Map> searList=new ArrayList<>();
+    private List<Map> searchMidList=new ArrayList<>();
 
     @Override
     protected int setContentView() {
-        return R.layout.fragment_child_product_all;
+        return R.layout.fragment_child_product_all_search;
     }
 
     @Override
@@ -46,6 +52,36 @@ public class ProductChildFragment_all extends LazyLoadFragment {
         final String key= (String) bundle.get("key");
 
         checkProductlv=findViewById(R.id.checkProductlv);
+        order_product_et=findViewById(R.id.order_product_et);//新增了一个搜索功能
+        order_product_et.addTextChangedListener(new TextWatcher() {//搜索功能监听器
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                productList.clear();
+                searList.clear();
+                searList.addAll(searchMidList);
+                String serachNnam=order_product_et.getText().toString();
+                if (!serachNnam.equals("")){
+                    for (int i=0;i<searList.size();i++){
+                        if (searList.get(i).get("proudctName").equals(serachNnam)){
+                            productList.add(searList.get(i));
+                        }
+                    }
+                    adapter.notifyDataSetChanged();
+                }else {
+                    productList.addAll(searchMidList);
+                    if (adapter!=null){
+                        adapter.notifyDataSetChanged();
+                    }
+                }
+            }
+        });
+
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("Product", Context.MODE_PRIVATE);
         midList = sharedPreferences.getString("productList", "camel");
         if (midList.equals("camel")){
@@ -53,6 +89,7 @@ public class ProductChildFragment_all extends LazyLoadFragment {
         }else {
             Gson gson = new Gson();
             productList = gson.fromJson(midList, new TypeToken<List<Map>>() {}.getType());
+            searchMidList.addAll(productList);
             adapter=new NewProductAdapter(getActivity(),productList);
             checkProductlv.setAdapter(adapter);
 
