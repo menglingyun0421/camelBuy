@@ -68,7 +68,8 @@ public class ProductChildFragment_all extends LazyLoadFragment {
                 String serachNnam=order_product_et.getText().toString();
                 if (!serachNnam.equals("")){
                     for (int i=0;i<searList.size();i++){
-                        if (searList.get(i).get("proudctName").equals(serachNnam)){
+//                        if (searList.get(i).get("proudctName").equals(serachNnam)){
+                        if (searList.get(i).get("proudctName").toString().contains(serachNnam)){
                             productList.add(searList.get(i));
                         }
                     }

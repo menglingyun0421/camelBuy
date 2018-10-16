@@ -66,7 +66,7 @@ public class OrderUnfinish extends BaseFragment{
                 String serachNnam=order_unfinish_et.getText().toString();
                 if (!serachNnam.equals("")){
                     for (int i=0;i<timeList.size();i++){
-                        if (timeList.get(i).get("clientName").equals(serachNnam)){
+                        if (timeList.get(i).get("clientName").toString().contains(serachNnam)){
                             searList.add(timeList.get(i));
                         }
                     }
